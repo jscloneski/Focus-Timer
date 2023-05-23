@@ -67,7 +67,7 @@ main {
     border-radius: 9999px;
 
     width: clamp(10rem, 10rem + 30vw, 22.8rem);
-    width: clamp(8rem, 5rem + 10vw, 10.8rem);
+    height: clamp(8rem, 5rem + 10vw, 10.8rem);
 }
 
 footer {
