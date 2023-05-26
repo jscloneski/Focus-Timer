@@ -26,7 +26,7 @@ function countdown(){
         }
 
         if( seconds <= 0 ) {
-            seconds = 2
+            seconds = 60
 
             minutesDisplay.textContent = String(minutes - 1).padStart(2, "0")
         }
