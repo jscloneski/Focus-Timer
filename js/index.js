@@ -1,5 +1,5 @@
 import resetControls from "./controls.js"
-import "./timer.js"
+import { countdown, resetTimer } from "./timer.js"
 
 const buttonPlay = document.querySelector('.play')
 const buttonPause = document.querySelector('.pause')
