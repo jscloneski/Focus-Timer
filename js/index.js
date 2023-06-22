@@ -1,5 +1,5 @@
 import resetControls from "./controls.js"
-import { countdown, resetTimer } from "./timer.js"
+import { Timer } from "./timer.js"
 
 const buttonPlay = document.querySelector('.play')
 const buttonPause = document.querySelector('.pause')
@@ -13,13 +13,20 @@ const secondsDisplay = document.querySelector('.seconds')
 let minutes = Number(minutesDisplay.textContent)
 let timerTimeOut
 
+const timer = Timer({
+    minutesDisplay,
+    secondsDisplay,
+    timerTimeOut,
+    resetControls,
+})
+
 buttonPlay.addEventListener('click', function() {
     buttonPlay.classList.add('hide')
     buttonPause.classList.remove('hide')
     buttonSet.classList.add('hide')
     buttonStop.classList.remove('hide')
 
-    countdown()
+    timer.countdown()
 })
 
 buttonPause.addEventListener('click', function() {
@@ -30,7 +37,7 @@ buttonPause.addEventListener('click', function() {
 
 buttonStop.addEventListener('click', function(){
     resetControls()
-    resetTimer()
+    timer.resetTimer()
 })
 
 buttonSoundOff.addEventListener('click', function() {
@@ -46,7 +53,7 @@ buttonSoundOn.addEventListener('click', function() {
 buttonSet.addEventListener('click', function() {
     let newMinutes = prompt('Quantos minutos?')
     if (!newMinutes) {
-        resetTimer()
+        timer.resetTimer()
         return
     }
 
