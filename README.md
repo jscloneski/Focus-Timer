@@ -11,6 +11,9 @@ Também há uma música de fundo funcionando em looping, podendo ser mutada a qu
 
  <a href="https://focus-timer-js.netlify.app/" target="_blank">Acesse aqui, e teste a aplicação! ⏳</a>
 
+ ![image](https://github.com/jscloneski/Focus-Timer/assets/91337448/0b0baf52-4863-43b8-8fb5-c39a205a20e7)
+
+
 
 
 
